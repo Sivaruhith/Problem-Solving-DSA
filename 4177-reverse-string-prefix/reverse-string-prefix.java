@@ -1,20 +1,14 @@
 class Solution {
     public String reversePrefix(String s, int k) {
-        int n=s.length();
         int right=k-1,left=0;
-        String str[]=s.split("");
-        String ans="";
+        char c[]=s.toCharArray();
         while(left<right){
-            String temp=str[left];
-            str[left]=str[right];
-            str[right]=temp;
+            char temp=c[left];
+            c[left]=c[right];
+            c[right]=temp;
             left++;
             right--;
         }
-        // return Arrays.toString(str);
-        for(int i=0;i<n;i++){
-            ans+=str[i];
-        }
-        return ans;
+        return new String(c);
     }
 }
