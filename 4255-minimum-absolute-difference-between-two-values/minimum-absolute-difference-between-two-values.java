@@ -11,11 +11,15 @@ class Solution {
                 l=r;
                 r++;
             }
-            else if((nums[l]==1 && nums[r]==1) || (nums[l]==0 && nums[r]==1) || (nums[l]==2 && nums[r]==2) || (nums[l]==0 && nums[r]==2)){
-                l=r;
+            // else if((nums[l]==1 && nums[r]==1) || (nums[l]==0 && nums[r]==1) || (nums[l]==2 && nums[r]==2) || (nums[l]==0 && nums[r]==2)){
+            //     l=r;
+            //     r++;
+            // }
+            else if(nums[l]!=0 && nums[r]!=2 && nums[r]!=1){
                 r++;
             }
             else{
+                l=r;
                 r++;
             }
         }
