@@ -11,8 +11,9 @@ class Solution {
     }
     public int sum(int val){
         int add=0;
+        int rem;
         while(val!=0){
-            int rem=val%10;
+            rem=val%10;
             val=val/10;
             add+=rem;
         }
